@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: dynamicBackground 20s infinite alternate;
+    background-size: cover;
+    background-position: center;
+
+    position: relative; /* Add this for the particle background */
+    overflow: hidden;
+}
+
+
+
+@keyframes dynamicBackground {
+    0% { background: linear-gradient(to bottom right, #ff6392, #ff756a); }
+    25% { background: linear-gradient(to bottom right, #ff756a, #f6c); }
+    50% { background: linear-gradient(to bottom right, #f6c, #6ad7ff); }
+    75% { background: linear-gradient(to bottom right, #6ad7ff, #ff6392); }
+    100% { background: linear-gradient(to bottom right, #ff6392, #ff756a); }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    padding-right: 1%;
+}
+
+#app {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#todo-input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+/* Apply the color effect for checked to-do items */
+li.checked {
+    text-decoration: line-through;
+    background-color: #d4f5d0; /* Green color for checked items */
+}
+
+/* Apply the color effect for deleted to-do items */
+li.deleted {
+    opacity: 0; /* Make the item transparent */
+    height: 0; /* Collapse the height to hide the item */
+    margin: 0; /* Remove any margin to prevent visible spacing */
+    padding: 0; /* Remove padding to prevent visible spacing */
+    border: none; /* Remove border to prevent visible spacing */
+}
+
+button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Cool design for the background */
+body {
+    background-image: linear-gradient(to bottom right, #ff6392, #ff756a);
+    background-size: cover;
+}
